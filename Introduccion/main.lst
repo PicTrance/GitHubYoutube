@@ -1,0 +1,195 @@
+CCS PCM C Compiler, Version 5.093, 4770               09-ago.-21 13:13
+
+               Filename:   G:\OneDrive - Soluciones Marva\proyectos de pics\Canal\Introduccion\main.lst
+
+               ROM used:   118 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   8 (1%) at main() level
+                           20 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 16
+
+0000:  MOVLP  00
+0001:  GOTO   019
+0002:  NOP
+.................... #include <16f18855.h>
+.................... //////////// Standard Header file for the PIC16F18855 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F18855
+.................... 
+.................... #list
+.................... 
+.................... 
+.................... #fuses RSTOSC_HFINTRC
+.................... //#fuses RSTOSC_HFINTRC_32MHZ
+.................... #fuses NOEXTOSC,NOCLKOUT,NOCKS,NOFCMEN
+.................... #fuses MCLR,PUT,NOLPBOR,NOBROWNOUT,BORV24,ZCDDIS,NOPPS1WAY,NOSTVREN,NODEBUG
+.................... #fuses WDTSW,NOWDT,WDTWIN_100%,WDTCLK_LFINTRC
+.................... #fuses NOWRT,NOSCANE,NOLVP, NOPROTECT,NOCPD
+.................... 
+.................... //#use delay(internal=4M)
+.................... #use delay(clock=4MHz)
+0003:  MOVLW  20
+0004:  MOVWF  05
+0005:  MOVLW  04
+0006:  MOVWF  04
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  RETURN
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_C0,rcv=PIN_C1,bits=8)
+.................... 
+.................... 
+.................... void main(){
+0019:  MOVLB  11
+001A:  CLRF   12
+001B:  CLRF   0F
+001C:  CLRF   11
+001D:  MOVLW  02
+001E:  MOVWF  13
+001F:  MOVLW  60
+0020:  MOVWF  0D
+0021:  MOVLB  00
+0022:  BCF    13.0
+0023:  BSF    18.0
+0024:  MOVLB  1E
+0025:  CLRF   38
+0026:  CLRF   43
+0027:  CLRF   4E
+0028:  MOVLB  13
+0029:  CLRF   11
+002A:  CLRF   12
+002B:  CLRF   13
+002C:  CLRF   10
+002D:  CLRF   15
+002E:  CLRF   16
+002F:  CLRF   17
+0030:  CLRF   14
+....................    int16 ADC;
+....................    setup_adc(ADC_LEGACY_MODE|ADC_CLOCK_DIV_2|ADC_ADRES_TO_ADPREV_AT_START );
+0031:  MOVLW  88
+0032:  MOVLB  01
+0033:  MOVWF  15
+0034:  CLRF   16
+0035:  CLRF   18
+0036:  MOVLW  FF
+0037:  MOVWF  1D
+0038:  MOVLB  02
+0039:  CLRF   0D
+003A:  MOVLW  80
+003B:  MOVLB  01
+003C:  MOVWF  13
+....................    setup_adc_ports(sAN4|VSS_VDD);
+003D:  MOVLW  00
+003E:  MOVWF  1A
+003F:  MOVLW  10
+0040:  MOVLB  1E
+0041:  MOVWF  38
+0042:  MOVLW  00
+0043:  MOVWF  43
+0044:  MOVWF  4E
+....................    setup_oscillator(OSC_HFINTRC_4MHZ|OSC_CLK_DIV_BY_1);
+0045:  MOVLB  11
+0046:  CLRF   12
+0047:  CLRF   0F
+0048:  CLRF   11
+0049:  MOVLW  02
+004A:  MOVWF  13
+004B:  MOVLW  60
+004C:  MOVWF  0D
+....................    //set_tris_a(0x00);       ///0 es para salida,  1, es para copnfigurar entrada
+....................    set_tris_a(0b00010000);
+004D:  MOVLW  10
+004E:  MOVLB  00
+004F:  MOVWF  11
+....................    set_tris_b(0x00);    //puerto b como salida
+0050:  MOVLW  00
+0051:  MOVWF  12
+....................    
+....................    
+....................    output_high(Pin_a0);
+0052:  BCF    11.0
+0053:  BSF    16.0
+....................    output_high(Pin_a3);
+0054:  BCF    11.3
+0055:  BSF    16.3
+....................    
+....................    set_adc_channel(4);
+0056:  MOVLW  04
+0057:  MOVLB  01
+0058:  MOVWF  1E
+....................    while(1){
+....................       ADC = READ_ADC();
+0059:  BSF    13.0
+005A:  NOP
+005B:  BTFSC  13.0
+005C:  GOTO   05B
+005D:  MOVLB  00
+005E:  CLRF   22
+005F:  MOVLB  01
+0060:  MOVF   0D,W
+0061:  MOVLB  00
+0062:  MOVWF  21
+....................       //printf("%Lu",ADC);
+....................       output_toggle(PIN_A0);
+0063:  BCF    11.0
+0064:  MOVLW  01
+0065:  XORWF  16,F
+....................       delay_ms(ADC);
+0066:  MOVF   22,W
+0067:  MOVWF  23
+0068:  INCF   23,F
+0069:  DECF   23,F
+006A:  BTFSC  03.2
+006B:  GOTO   070
+006C:  MOVLW  FF
+006D:  MOVWF  24
+006E:  CALL   003
+006F:  GOTO   069
+0070:  MOVF   21,W
+0071:  MOVWF  24
+0072:  CALL   003
+0073:  MOVLB  01
+0074:  GOTO   059
+....................       
+....................    /*
+....................       output_high(Pin_a0);
+....................       output_high(Pin_a3);
+....................       output_high(Pin_b0);
+....................       delay_ms(10);
+....................       output_low(Pin_a0);
+....................       output_low(Pin_a3);
+....................       output_low(Pin_b0);
+....................       delay_ms(10);*/
+....................    }
+.................... }
+0075:  SLEEP
+
+Configuration Fuses:
+   Word  1: 1FEC   NOEXTOSC RSTOSC_HFINTRC NOCLKOUT CKS NOFCMEN
+   Word  2: 273D   MCLR PUT NOLPBOR NOBROWNOUT BORV24 ZCDDIS NOPPS1WAY NOSTVREN NODEBUG
+   Word  3: 069F   WDTSW NOWDT WDTWIN_100% WDTCLK_LFINTRC
+   Word  4: 0FFF   NOWRT NOSCANE NOLVP
+   Word  5: 3FFF   NOPROTECT NOCPD

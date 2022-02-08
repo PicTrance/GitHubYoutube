@@ -1,0 +1,26 @@
+[defines]
+buildcount=28
+
+[Opened Files]
+1=ex_usb_serial.c
+t1=203
+2=ex_usb_common.h
+t2=161
+Count=2
+[PROJECT]
+Target=ex_usb_serial.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.104
+Compiler=PCH
+[Target Data]
+FileList=ex_usb_serial.c
+[ex_usb_serial.c]
+Type=4
+[mru-list]
+1=ex_usb_serial.c
+[Units]
+Count=1
+1=ex_usb_serial (main)
+
+[fileformats]
+forcecoff=0

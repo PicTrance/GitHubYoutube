@@ -1,0 +1,18 @@
+#include <main.h>
+
+void main()
+{
+   port_a_pullups(0x01);
+   port_b_pullups(0x01);
+   setup_adc_ports(sAN4, VSS_VDD);
+   setup_adc(ADC_CLOCK_DIV_32 | ADC_TAD_MUL_0 | ADC_LEGACY_MODE | ADC_THRESHOLD_INT_DISABLED);
+
+   //output_a(15);
+   while(TRUE)
+   {
+
+
+      //TODO: User Code
+   }
+
+}

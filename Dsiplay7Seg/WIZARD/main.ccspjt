@@ -1,0 +1,45 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC16F18855
+CCSVerions=5.093
+Compiler=PCM
+CCSVersion=5.093
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[G:\OneDrive - Soluciones Marva\proyectos de pics\Canal\Dsiplay7Seg\WIZARD\main]
+Type=4
+[mru-list]
+1=main.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=09-08-2021
+D1_L=4
+D1_L1=[73106]Project Opened.
+D1_L2=[73147]Started Editing.
+D1_L3=[73502]Stopped Editing.
+TotalEdit=6
+TotalDebug=0
+D1_E=6
+D1_D=0
+D1_L4=[73502]Project Closed.
+
+[Opened Files]
+1=main.c
+t1=1
+2=main.h
+t2=1
+Count=2
+[main.c]
+Type=4
+
+[defines]
+buildcount=12
+[Units]
+Count=1
+1=main (main)

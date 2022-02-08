@@ -1,0 +1,470 @@
+CCS PCM C Compiler, Version 5.093, 4770               21-ago.-21 21:52
+
+               Filename:   G:\OneDrive - Soluciones Marva\proyectos de pics\Canal\Dsiplay7Seg\main.lst
+
+               ROM used:   340 words (4%)
+                           Largest free fragment is 2048
+               RAM used:   19 (2%) at main() level
+                           35 (3%) worst case
+               Stack used: 1 locations (0 in main + 1 for interrupts)
+               Stack size: 16
+
+0000:  MOVLP  00
+0001:  GOTO   097
+0002:  NOP
+*
+0004:  CLRF   03
+0005:  MOVLP  00
+0006:  MOVLB  00
+0007:  MOVF   77,W
+0008:  MOVWF  20
+0009:  MOVF   78,W
+000A:  MOVWF  21
+000B:  MOVF   79,W
+000C:  MOVWF  22
+000D:  MOVF   7A,W
+000E:  MOVWF  23
+000F:  MOVLW  07
+0010:  MOVWF  05
+0011:  MOVLW  16
+0012:  MOVWF  04
+0013:  BTFSS  00.5
+0014:  GOTO   01B
+0015:  MOVLW  07
+0016:  MOVWF  05
+0017:  MOVLW  0C
+0018:  MOVWF  04
+0019:  BTFSC  00.5
+001A:  GOTO   024
+001B:  MOVF   20,W
+001C:  MOVWF  77
+001D:  MOVF   21,W
+001E:  MOVWF  78
+001F:  MOVF   22,W
+0020:  MOVWF  79
+0021:  MOVF   23,W
+0022:  MOVWF  7A
+0023:  RETFIE
+0024:  MOVLP  00
+0025:  GOTO   026
+.................... #include <16f18855.h>
+.................... //////////// Standard Header file for the PIC16F18855 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F18855
+*
+005B:  CLRF   78
+005C:  CLRF   79
+005D:  CLRF   77
+005E:  CLRF   7A
+005F:  MOVF   31,W
+0060:  BTFSS  03.2
+0061:  GOTO   065
+0062:  MOVF   30,W
+0063:  BTFSC  03.2
+0064:  GOTO   07F
+0065:  MOVLW  10
+0066:  MOVWF  32
+0067:  BCF    03.0
+0068:  RLF    2E,F
+0069:  RLF    2F,F
+006A:  RLF    77,F
+006B:  RLF    7A,F
+006C:  MOVF   31,W
+006D:  SUBWF  7A,W
+006E:  BTFSS  03.2
+006F:  GOTO   072
+0070:  MOVF   30,W
+0071:  SUBWF  77,W
+0072:  BTFSS  03.0
+0073:  GOTO   07B
+0074:  MOVF   30,W
+0075:  SUBWF  77,F
+0076:  BTFSS  03.0
+0077:  DECF   7A,F
+0078:  MOVF   31,W
+0079:  SUBWF  7A,F
+007A:  BSF    03.0
+007B:  RLF    78,F
+007C:  RLF    79,F
+007D:  DECFSZ 32,F
+007E:  GOTO   067
+007F:  RETURN
+.................... 
+.................... #list
+.................... 
+.................... 
+.................... #fuses RSTOSC_HFINTRC
+.................... //#fuses RSTOSC_HFINTRC_32MHZ
+.................... #fuses NOEXTOSC,NOCLKOUT,NOCKS,NOFCMEN
+.................... #fuses MCLR,PUT,NOLPBOR,NOBROWNOUT,BORV24,NOZCDDIS,NOPPS1WAY,NOSTVREN,NODEBUG
+.................... #fuses WDTSW,NOWDT,WDTWIN_100%,WDTCLK_LFINTRC
+.................... #fuses NOWRT,NOSCANE,NOLVP, NOPROTECT,NOCPD
+.................... 
+.................... //#use delay(internal=4M)
+.................... #use delay(clock=4MHz)
+0080:  MOVLW  20
+0081:  MOVWF  05
+0082:  MOVLW  0D
+0083:  MOVWF  04
+0084:  MOVF   00,W
+0085:  BTFSC  03.2
+0086:  GOTO   095
+0087:  MOVLW  01
+0088:  MOVWF  78
+0089:  CLRF   77
+008A:  DECFSZ 77,F
+008B:  GOTO   08A
+008C:  DECFSZ 78,F
+008D:  GOTO   089
+008E:  MOVLW  4A
+008F:  MOVWF  77
+0090:  DECFSZ 77,F
+0091:  GOTO   090
+0092:  GOTO   093
+0093:  DECFSZ 00,F
+0094:  GOTO   087
+0095:  MOVLP  00
+0096:  GOTO   151 (RETURN)
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_C0,rcv=PIN_C1,bits=8)
+.................... //multiplexacion de display de 7 seg
+.................... //
+.................... 
+.................... #define d1 PIN_A0
+.................... #define d2 PIN_A1
+.................... #define d3 PIN_A2
+.................... #define d4 PIN_A3
+.................... int16 contador=0;
+.................... int8 u,d,c,um; //se separa en unidades
+.................... int8 flag=0;//flag para los display
+.................... 
+.................... #INT_TIMER0
+.................... void Ext_int_timer0(void){
+....................    set_timer0(65534);
+*
+0026:  BTFSS  1E.4
+0027:  GOTO   02A
+0028:  MOVLW  FF
+0029:  MOVWF  1D
+002A:  MOVLW  FE
+002B:  MOVWF  1C
+....................    
+....................    if (flag == 1){
+002C:  DECFSZ 2A,W
+002D:  GOTO   034
+....................       
+....................       output_b(u);
+002E:  CLRF   12
+002F:  MOVF   26,W
+0030:  MOVWF  17
+....................       output_a(1);
+0031:  CLRF   11
+0032:  MOVLW  01
+0033:  MOVWF  16
+.................... //!      output_high(d1);
+.................... //!      output_low(d2);
+.................... //!      output_low(d3);
+....................    }
+....................    if (flag == 2){
+0034:  MOVF   2A,W
+0035:  SUBLW  02
+0036:  BTFSS  03.2
+0037:  GOTO   03E
+....................       
+....................       output_b(d);
+0038:  CLRF   12
+0039:  MOVF   27,W
+003A:  MOVWF  17
+....................       output_a(2);
+003B:  CLRF   11
+003C:  MOVLW  02
+003D:  MOVWF  16
+.................... //!      output_high(d2);
+.................... //!      output_low(d1);
+.................... //!      output_low(d3);
+....................    }
+....................    if (flag == 3){
+003E:  MOVF   2A,W
+003F:  SUBLW  03
+0040:  BTFSS  03.2
+0041:  GOTO   049
+....................       flag = 0;
+0042:  CLRF   2A
+....................       output_b(c);
+0043:  CLRF   12
+0044:  MOVF   28,W
+0045:  MOVWF  17
+....................       output_a(4);
+0046:  CLRF   11
+0047:  MOVLW  04
+0048:  MOVWF  16
+.................... //!      output_high(d3);
+.................... //!      output_low(d2);
+.................... //!      output_low(d1);
+....................    }   
+....................    if (flag == 4){
+0049:  MOVF   2A,W
+004A:  SUBLW  04
+004B:  BTFSS  03.2
+004C:  GOTO   054
+....................       flag = 0;
+004D:  CLRF   2A
+....................       output_b(um);
+004E:  CLRF   12
+004F:  MOVF   29,W
+0050:  MOVWF  17
+....................       output_a(8);
+0051:  CLRF   11
+0052:  MOVLW  08
+0053:  MOVWF  16
+....................    }
+....................    flag++;
+0054:  INCF   2A,F
+.................... 
+....................    
+....................    //output_toggle(d3);
+....................    
+0055:  MOVLB  0E
+0056:  BCF    0C.5
+0057:  MOVLB  00
+0058:  MOVLP  00
+0059:  MOVLB  00
+005A:  GOTO   01B
+.................... }
+.................... 
+.................... void main(){
+*
+0097:  MOVLB  11
+0098:  CLRF   12
+0099:  CLRF   0F
+009A:  CLRF   11
+009B:  MOVLW  02
+009C:  MOVWF  13
+009D:  MOVLW  60
+009E:  MOVWF  0D
+009F:  MOVLB  00
+00A0:  BCF    13.0
+00A1:  BSF    18.0
+00A2:  CLRF   25
+00A3:  CLRF   24
+00A4:  CLRF   2A
+00A5:  MOVLB  1E
+00A6:  CLRF   38
+00A7:  CLRF   43
+00A8:  CLRF   4E
+00A9:  MOVLB  13
+00AA:  CLRF   11
+00AB:  CLRF   12
+00AC:  CLRF   13
+00AD:  CLRF   10
+00AE:  CLRF   15
+00AF:  CLRF   16
+00B0:  CLRF   17
+00B1:  CLRF   14
+....................    
+....................    setup_adc(NO_ANALOGS);
+00B2:  MOVLW  08
+00B3:  MOVLB  01
+00B4:  MOVWF  15
+00B5:  CLRF   16
+00B6:  CLRF   18
+00B7:  MOVLW  FF
+00B8:  MOVWF  1D
+00B9:  MOVLB  02
+00BA:  CLRF   0D
+00BB:  MOVLW  80
+00BC:  MOVLB  01
+00BD:  MOVWF  13
+....................    setup_adc_ports(NO_ANALOGS);
+00BE:  MOVLW  00
+00BF:  MOVWF  1A
+00C0:  MOVLB  1E
+00C1:  MOVWF  38
+00C2:  MOVWF  43
+00C3:  MOVWF  4E
+....................    setup_comparator(NC_NC_NC_NC);
+00C4:  MOVLB  13
+00C5:  CLRF   11
+00C6:  MOVLW  07
+00C7:  MOVWF  12
+00C8:  MOVWF  13
+00C9:  CLRF   10
+00CA:  CLRF   15
+00CB:  MOVWF  16
+00CC:  MOVWF  17
+00CD:  CLRF   14
+.................... //!   setup_adc(ADC_LEGACY_MODE|ADC_CLOCK_DIV_2|ADC_ADRES_TO_ADPREV_AT_START );
+.................... //!   setup_adc_ports(sAN4|VSS_VDD);
+.................... 
+....................    setup_oscillator(OSC_HFINTRC_4MHZ|OSC_CLK_DIV_BY_1);
+00CE:  MOVLB  11
+00CF:  CLRF   12
+00D0:  CLRF   0F
+00D1:  CLRF   11
+00D2:  MOVLW  02
+00D3:  MOVWF  13
+00D4:  MOVLW  60
+00D5:  MOVWF  0D
+....................    setup_timer_0(T0_HFINTOSC| T0_16_BIT | T0_DIV_4096);
+00D6:  MOVLW  90
+00D7:  MOVLB  00
+00D8:  MOVWF  1E
+00D9:  MOVLW  6C
+00DA:  MOVWF  1F
+....................    set_timer0(65525);
+00DB:  BTFSS  1E.4
+00DC:  GOTO   0DF
+00DD:  MOVLW  FF
+00DE:  MOVWF  1D
+00DF:  MOVLW  F5
+00E0:  MOVWF  1C
+....................    //set_tris_a(0x00);       ///0 es para salida,  1, es para copnfigurar entrada
+....................    set_tris_a(0b11110000);
+00E1:  MOVLW  F0
+00E2:  MOVWF  11
+....................    set_tris_b(0x00);    //puerto b como salida
+00E3:  MOVLW  00
+00E4:  MOVWF  12
+....................    output_b(0);
+00E5:  CLRF   12
+00E6:  CLRF   17
+....................    output_a(0);
+00E7:  CLRF   11
+00E8:  CLRF   16
+....................    
+....................    ENABLE_INTERRUPTS(INT_TIMER0);
+00E9:  MOVLB  0E
+00EA:  BSF    16.5
+....................    ENABLE_INTERRUPTS(GLOBAL);
+00EB:  MOVLW  C0
+00EC:  IORWF  0B,F
+....................    ENABLE_INTERRUPTS(PERIPH);
+00ED:  BSF    0B.6
+....................    
+....................    while(true){
+....................       contador++;
+00EE:  MOVLB  00
+00EF:  INCF   24,F
+00F0:  BTFSC  03.2
+00F1:  INCF   25,F
+....................       if (contador>999){contador=0;}
+00F2:  MOVF   25,W
+00F3:  SUBLW  02
+00F4:  BTFSC  03.0
+00F5:  GOTO   0FF
+00F6:  XORLW  FF
+00F7:  BTFSS  03.2
+00F8:  GOTO   0FD
+00F9:  MOVF   24,W
+00FA:  SUBLW  E7
+00FB:  BTFSC  03.0
+00FC:  GOTO   0FF
+00FD:  CLRF   25
+00FE:  CLRF   24
+....................       u = contador%10;
+00FF:  MOVF   25,W
+0100:  MOVWF  2F
+0101:  MOVF   24,W
+0102:  MOVWF  2E
+0103:  CLRF   31
+0104:  MOVLW  0A
+0105:  MOVWF  30
+0106:  CALL   05B
+0107:  MOVF   77,W
+0108:  MOVWF  26
+....................       d = (contador/10)%10;
+0109:  MOVF   25,W
+010A:  MOVWF  2F
+010B:  MOVF   24,W
+010C:  MOVWF  2E
+010D:  CLRF   31
+010E:  MOVLW  0A
+010F:  MOVWF  30
+0110:  CALL   05B
+0111:  MOVF   79,W
+0112:  MOVWF  2D
+0113:  MOVF   78,W
+0114:  MOVWF  2C
+0115:  MOVF   79,W
+0116:  MOVWF  2F
+0117:  MOVF   78,W
+0118:  MOVWF  2E
+0119:  CLRF   31
+011A:  MOVLW  0A
+011B:  MOVWF  30
+011C:  CALL   05B
+011D:  MOVF   77,W
+011E:  MOVWF  27
+....................       c = (contador/100)%10;
+011F:  MOVF   25,W
+0120:  MOVWF  2F
+0121:  MOVF   24,W
+0122:  MOVWF  2E
+0123:  CLRF   31
+0124:  MOVLW  64
+0125:  MOVWF  30
+0126:  CALL   05B
+0127:  MOVF   79,W
+0128:  MOVWF  2D
+0129:  MOVF   78,W
+012A:  MOVWF  2C
+012B:  MOVF   79,W
+012C:  MOVWF  2F
+012D:  MOVF   78,W
+012E:  MOVWF  2E
+012F:  CLRF   31
+0130:  MOVLW  0A
+0131:  MOVWF  30
+0132:  CALL   05B
+0133:  MOVF   77,W
+0134:  MOVWF  28
+....................       um = (contador/1000)%10;
+0135:  MOVF   25,W
+0136:  MOVWF  2F
+0137:  MOVF   24,W
+0138:  MOVWF  2E
+0139:  MOVLW  03
+013A:  MOVWF  31
+013B:  MOVLW  E8
+013C:  MOVWF  30
+013D:  CALL   05B
+013E:  MOVF   79,W
+013F:  MOVWF  2D
+0140:  MOVF   78,W
+0141:  MOVWF  2C
+0142:  MOVF   79,W
+0143:  MOVWF  2F
+0144:  MOVF   78,W
+0145:  MOVWF  2E
+0146:  CLRF   31
+0147:  MOVLW  0A
+0148:  MOVWF  30
+0149:  CALL   05B
+014A:  MOVF   77,W
+014B:  MOVWF  29
+....................       delay_ms(500);
+014C:  MOVLW  02
+014D:  MOVWF  2C
+014E:  MOVLW  FA
+014F:  MOVWF  2D
+0150:  GOTO   080
+0151:  DECFSZ 2C,F
+0152:  GOTO   14E
+0153:  GOTO   0EF
+....................    }
+.................... }
+0154:  SLEEP
+
+Configuration Fuses:
+   Word  1: 1FEC   NOEXTOSC RSTOSC_HFINTRC NOCLKOUT CKS NOFCMEN
+   Word  2: 233D   MCLR PUT NOLPBOR NOBROWNOUT BORV24 NOZCDDIS NOPPS1WAY NOSTVREN NODEBUG
+   Word  3: 069F   WDTSW NOWDT WDTWIN_100% WDTCLK_LFINTRC
+   Word  4: 0FFF   NOWRT NOSCANE NOLVP
+   Word  5: 3FFF   NOPROTECT NOCPD

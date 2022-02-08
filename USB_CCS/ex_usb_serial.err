@@ -1,0 +1,10 @@
+Compiling G:\OneDrive - Soluciones Marva\proyectos de pics\Canal\USB_CCS\ex_usb_serial on 21-jun.-21 at 19:02
+>>> Warning 203 "C:\Program Files (x86)\PICC 5.104\Drivers\pic18_usb.c" Line 728(1,1): Condition always TRUE
+>>> Warning 216 "G:\OneDrive - Soluciones Marva\proyectos de pics\Canal\USB_CCS\ex_usb_serial.c" Line 246(1,2): Interrupts disabled during call to prevent re-entrancy:  (usb_token_reset)
+>>> Warning 216 "G:\OneDrive - Soluciones Marva\proyectos de pics\Canal\USB_CCS\ex_usb_serial.c" Line 246(1,2): Interrupts disabled during call to prevent re-entrancy:  (usb_tbe)
+>>> Warning 216 "G:\OneDrive - Soluciones Marva\proyectos de pics\Canal\USB_CCS\ex_usb_serial.c" Line 246(1,2): Interrupts disabled during call to prevent re-entrancy:  (usb_flush_in)
+>>> Warning 216 "G:\OneDrive - Soluciones Marva\proyectos de pics\Canal\USB_CCS\ex_usb_serial.c" Line 246(1,2): Interrupts disabled during call to prevent re-entrancy:  (usb_cdc_flush_tx_buffer)
+>>> Warning 216 "G:\OneDrive - Soluciones Marva\proyectos de pics\Canal\USB_CCS\ex_usb_serial.c" Line 246(1,2): Interrupts disabled during call to prevent re-entrancy:  (usb_cdc_get_discard)
+      Memory usage:   ROM=19%      RAM=23% - 25%
+      0 Errors,  6 Warnings.
+Build Successful.

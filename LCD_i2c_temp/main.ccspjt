@@ -1,0 +1,104 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC16F18855
+CCSVersion=5.093
+Compiler=PCM
+Development_Mode=
+ToolSuite=CCS
+[Target Data]
+FileList=main.c
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+[main.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=main.c
+
+[defines]
+buildcount=25
+enabled=0
+chip=1
+D1=
+V1=
+
+[Opened Files]
+1=main.c
+t1=25
+2=PIC16F18855_registers.h
+t2=135
+Count=3
+3=PIC16F18855_registe.h
+t3=1
+
+[ProjectLog]
+Days=3
+D1=21-08-2021
+D1_L=11
+D1_L1=[77234]Stopped Editing.
+TotalEdit=43
+TotalDebug=0
+D1_E=25
+D1_D=0
+D1_L2=[77897]Started Editing.
+D1_L3=[77923]Stopped Editing.
+D1_L4=[78150]Project Closed.
+D1_L5=[78811]Project Opened.
+D1_L6=[79114]Project Opened.
+D1_L7=[79116]Project Closed.
+D1_L8=[79122]Project Opened.
+D1_L9=[81313]Started Editing.
+D1_L10=[81679]Stopped Editing.
+D1_L11=[81679]Project Closed.
+D2=22-08-2021
+D2_L=8
+D2_L1=[41294]Project Opened.
+D2_L2=[44546]Project Closed.
+D2_L3=[52167]Project Opened.
+D2_L4=[52688]Started Editing.
+D2_L5=[54057]Stopped Editing.
+D2_L6=[55480]Started Editing.
+D2_L7=[55787]Stopped Editing.
+D2_E=18
+D2_D=0
+D2_L8=[59507]Project Closed.
+D3=24-08-2021
+D3_L=2
+D3_L1=[60321]Project Opened.
+D3_L2=[60872]Project Closed.
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[Directories]
+Include=
+Library=
+LinkerScript=
+output=
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+[CompilerVersion]
+Fixed=
+[Units]
+Count=1
+1=main (main)
