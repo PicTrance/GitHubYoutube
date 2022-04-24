@@ -1,0 +1,61 @@
+[defines]
+buildcount=71
+
+[Opened Files]
+1=main.c
+t1=37
+Count=2
+2=C:\Program Files (x86)\PICC\Devices\18f4550.h
+t2=3
+3=lcd20x4.c
+t3=1
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.105
+Compiler=PCH
+[Target Data]
+FileList=main.c
+[main.c]
+Type=4
+[mru-list]
+1=main.c
+
+[ProjectLog]
+Days=2
+D1=23-04-2022
+D1_L=8
+D1_L1=[82780]Stopped Editing.
+D1_L2=[82821]Started Editing.
+D1_L3=[83958]Stopped Editing.
+D1_L4=[84265]Started Editing.
+D1_L5=[84570]Stopped Editing.
+D1_L6=[84606]Started Editing.
+D1_L7=[85786]Stopped Editing.
+D1_L8=[86250]Started Editing.
+D2=24-04-2022
+D2_L=14
+D2_L1=[420]Stopped Editing.
+D2_L2=[639]Started Editing.
+D2_L3=[2055]Stopped Editing.
+D2_L4=[3209]Started Editing.
+D2_L5=[3702]Stopped Editing.
+TotalEdit=118
+TotalDebug=0
+D2_E=118
+D2_D=0
+D2_L6=[3702]Project Closed.
+D2_L7=[33184]Project Opened.
+D2_L8=[33794]Started Editing.
+D2_L9=[34155]Stopped Editing.
+D2_L10=[34173]Started Editing.
+D2_L11=[35079]Stopped Editing.
+D2_L12=[36101]Started Editing.
+D2_L13=[38602]Stopped Editing.
+D2_L14=[38602]Project Closed.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=main (main)

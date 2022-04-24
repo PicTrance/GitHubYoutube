@@ -1,0 +1,210 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019-01A strtok.save
+01B-01E _Randseed
+01F     lcd_line
+020-029 buffer
+02A.0   flag
+02B-02C @sprintf_string
+02D-030 MAIN.numero
+031-034 MAIN.num2
+035     MAIN.contador
+036     lcd_init.i
+036-037 strtof.s
+036-039 @PRINTF_L32D_1025FPFPF.P1
+036     MAIN.@SCRATCH1
+036     @PSTRINGC_1025.@SCRATCH1
+036     @PSTRINGC_9600_31766_31767.@SCRATCH1
+036     @PSTRINGR_1025.@SCRATCH1
+037     @PRINTF_D_1025.P1
+037     lcd_init.@SCRATCH1
+037     @PSTRINGC_1025.@SCRATCH2
+037     @PSTRINGC_9600_31766_31767.@SCRATCH2
+037     @PSTRINGR_1025.@SCRATCH2
+038     @PRINTF_D_1025.P1
+038-039 strtof.endptr
+039     @PRINTF_D_1025.@SCRATCH1
+03A     @PRINTF_L32D_1025FPFPF.P1
+03A-03D strtof.pow10
+03A     @PRINTF_D_1025.@SCRATCH2
+03B     @PRINTF_D_1025.@SCRATCH3
+03B     @PRINTF_L32D_1025FPFPF.@SCRATCH1
+03C     @PRINTF_D_1025.@SCRATCH4
+03C     @PRINTF_L32D_1025FPFPF.@SCRATCH2
+03D     @DIV88.P1
+03D     @PRINTF_L32D_1025FPFPF.@SCRATCH3
+03E-041 strtof.result
+03E     @DIV88.P1
+03E     @PRINTF_L32D_1025FPFPF.@SCRATCH4
+03F     @DIV88.@SCRATCH1
+03F     @PRINTF_L32D_1025FPFPF.@SCRATCH5
+040     @PRINTF_L32D_1025FPFPF.@SCRATCH6
+041     @PRINTF_L32D_1025FPFPF.@SCRATCH7
+042.0   strtof.skip
+042.1   strtof.sign
+042.2   strtof.point
+042     @PRINTF_L32D_1025FPFPF.@SCRATCH8
+043-046 @FTOSD.P1
+043     strtof.c
+043-046 @DIV3232.P1
+043     lcd_putc.c
+044     lcd_gotoxy.x
+044     strtof.ptr
+044     @delay_ms1.P1
+045     lcd_gotoxy.y
+045-048 @MULFF.P1
+045     strtof.@SCRATCH1
+046     lcd_gotoxy.address
+046     strtof.@SCRATCH2
+047-04A @DIV3232.P1
+047     strtof.@SCRATCH3
+047     lcd_gotoxy.@SCRATCH1
+047     @FTOSD.@SCRATCH1
+048     lcd_send_byte.address
+048     strtof.@SCRATCH4
+049-04C @ADDFF.P1
+049-04A @ITOF.P2
+049-04C @DIVFF.P3
+049-04C @MULFF.P4
+049     lcd_send_byte.n
+04A     lcd_send_byte.@SCRATCH1
+04B     lcd_send_nibble.nibble
+04B     @DIV3232.@SCRATCH1
+04C     @DIV3232.@SCRATCH2
+04D-050 @ADDFF.P1
+04D-050 @DIVFF.P2
+04D     @MULFF.@SCRATCH1
+04D     @DIV3232.@SCRATCH3
+04E     @MULFF.@SCRATCH2
+04E     @DIV3232.@SCRATCH4
+04F     @MULFF.@SCRATCH3
+04F     @DIV3232.@SCRATCH5
+051     @ADDFF.@SCRATCH1
+051     @DIVFF.@SCRATCH1
+052     @ADDFF.@SCRATCH2
+052     @DIVFF.@SCRATCH2
+053     @ADDFF.@SCRATCH3
+053     @DIVFF.@SCRATCH3
+054     @ADDFF.@SCRATCH4
+054     @DIVFF.@SCRATCH4
+055     @ADDFF.@SCRATCH5
+055     @DIVFF.@SCRATCH5
+056     @ADDFF.@SCRATCH6
+056     @DIVFF.@SCRATCH6
+057     @ADDFF.@SCRATCH7
+058     @ADDFF.@SCRATCH8
+059     RDA_isr.i
+05A     RDA_isr.@SCRATCH1
+05B     RDA_isr.@SCRATCH2
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000AE  LCD_INIT_STRING.call
+0000BE  LCD_INIT_STRING.data
+0000C2  RDA_isr
+000126  @const1039.call
+000146  @const1044.call
+00017E  @delay_ms1
+0001A6  lcd_send_nibble
+0001E4  lcd_send_byte
+000222  lcd_init
+000276  lcd_gotoxy
+0002B8  lcd_putc
+000300  @PSTRINGC_1025
+000322  @PSTRINGC_9600_31766_31767
+000346  @DIV88
+00036E  @PRINTF_D_1025
+00041A  @MULFF
+00050C  @ITOF
+000542  @DIVFF
+00069C  @ADDFF
+000906  strtof
+000B36  @PSTRINGR_1025
+000B5E  @FTOSD
+000B9E  @DIV3232
+000C2C  @PRINTF_L32D_1025FPFPF
+000DAE  @cinit1
+000DAE  MAIN
+000DD4  @cinit2
+0135  StrtoulGO
+0135  StrtolGO
+
+Project Directory:
+    D:\OneDrive - Soluciones Marva\YouTubeCanal\GitHub\CCS\RecibirStringConvertir_int_float\
+
+Project Files:
+    main.c                                                  [24-abr.-22 10:43  CRC=6F31CAD3]
+    C:\Program Files (x86)\PICC\Devices\18f4550.h           [12-jul.-21 10:21  CRC=BFBE72F1]
+    C:\Program Files (x86)\PICC\Drivers\stdlib.h            [30-jun.-20 14:21  CRC=452E14BB]
+    C:\Program Files (x86)\PICC\Drivers\stddef.h            [30-ene.-19 12:26  CRC=897CEC6C]
+    C:\Program Files (x86)\PICC\Drivers\string.h            [06-abr.-20 08:43  CRC=B1605627]
+    C:\Program Files (x86)\PICC\Drivers\ctype.h             [03-ene.-08 15:55  CRC=2D1F019F]
+    lcd20x4.c                                               [21-feb.-22 21:48  CRC=C59082C4]
+
+Source signature=673B9C39
+Program memory checksum=0000
+Hex file CRC=B53F
+
+Units:
+    D:\OneDrive - Soluciones Marva\YouTubeCanal\GitHub\CCS\RecibirStringConvertir_int_float\main (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
