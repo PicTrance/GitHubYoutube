@@ -1,14 +1,16 @@
 [defines]
-buildcount=71
+buildcount=72
 
 [Opened Files]
 1=main.c
-t1=37
-Count=2
+t1=1
+Count=4
 2=C:\Program Files (x86)\PICC\Devices\18f4550.h
 t2=3
-3=lcd20x4.c
-t3=1
+3=get_string.c
+t3=67
+4=main_getString.c
+t4=67
 [PROJECT]
 Target=main.hex
 Processor_Text=PIC18F4550
@@ -34,15 +36,15 @@ D1_L6=[84606]Started Editing.
 D1_L7=[85786]Stopped Editing.
 D1_L8=[86250]Started Editing.
 D2=24-04-2022
-D2_L=14
+D2_L=20
 D2_L1=[420]Stopped Editing.
 D2_L2=[639]Started Editing.
 D2_L3=[2055]Stopped Editing.
 D2_L4=[3209]Started Editing.
 D2_L5=[3702]Stopped Editing.
-TotalEdit=118
+TotalEdit=123
 TotalDebug=0
-D2_E=118
+D2_E=123
 D2_D=0
 D2_L6=[3702]Project Closed.
 D2_L7=[33184]Project Opened.
@@ -53,6 +55,12 @@ D2_L11=[35079]Stopped Editing.
 D2_L12=[36101]Started Editing.
 D2_L13=[38602]Stopped Editing.
 D2_L14=[38602]Project Closed.
+D2_L15=[52577]Project Opened.
+D2_L16=[52590]Started Editing.
+D2_L17=[53175]Stopped Editing.
+D2_L18=[53223]Started Editing.
+D2_L19=[53238]Stopped Editing.
+D2_L20=[53241]Project Closed.
 
 [fileformats]
 forcecoff=0

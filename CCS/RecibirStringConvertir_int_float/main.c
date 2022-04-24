@@ -3,6 +3,7 @@
 #use delay(clock=4M)
 #use rs232(baud=9600,parity=N,stop=1,xmit=PIN_C6,rcv=PIN_C7,bits=8)//,TIMEOUT=100,DISABLE_INTS)
 #include <stdlib.h>     /* atof */ /* atoi */ 
+#include "get_string.c"
 
    #define LCD_DB4   PIN_D4
    #define LCD_DB5   PIN_D5 
