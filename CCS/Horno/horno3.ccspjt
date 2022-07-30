@@ -1,0 +1,42 @@
+[PROJECT]
+Target=horno3.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.105
+Compiler=PCH
+[Target Data]
+FileList=horno3.c
+[horno3.c]
+Type=4
+[mru-list]
+1=horno3.c
+
+[defines]
+buildcount=2
+
+[Opened Files]
+1=horno3.c
+t1=1
+2=get_string.c
+t2=1
+Count=2
+[Units]
+Count=1
+1=horno3 (main)
+
+[ProjectLog]
+Days=2
+D1=24-04-2022
+D1_L=2
+D1_L1=[77909]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L2=[77909]Project Closed.
+D2=24-05-2022
+D2_L=2
+D2_L1=[77333]Project Opened.
+D2_L2=[77395]Project Closed.
+
+[fileformats]
+forcecoff=0

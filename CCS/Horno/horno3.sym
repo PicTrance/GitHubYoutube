@@ -1,0 +1,240 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004-017 trama_principal
+018-021 trama_1
+022-02B trama_2
+02C-02D dato_rx
+02E-02F strtok.save
+030-033 _Randseed
+034-037 setpoint
+038-039 @sprintf_string
+03A-03D MAIN.valor
+03E-041 MAIN.kp
+042-045 MAIN.ki
+046-049 MAIN.kd
+04A-04D MAIN.k1
+04E-051 MAIN.k2
+052-055 MAIN.k3
+056-059 MAIN.e0
+05A-05D MAIN.e1
+05E-061 MAIN.e2
+062-065 MAIN.u0
+066-069 MAIN.u1
+06A-06D MAIN.retroalimentacion
+06E-06F MAIN.max
+070-071 MAIN.min
+072-073 MAIN.duty
+074-075 read_string.s
+074     read_plot.b_ini
+074-077 @FLT.P1
+074     lcd_init.i
+074-075 @ITOF.P1
+074     @PSTRINGCN_758.P2
+074-077 @PRINTF_L32D_758FPFPF.P3
+074-075 atoi.s
+074-077 @SFTOI.P1
+074     SET_POINT.@SCRATCH1
+074     @PSTRINGC_758.@SCRATCH1
+074     MAIN.@SCRATCH1
+075     read_plot.b_fin
+075-078 lcd_init.LCD_INIT_STRING
+075     @PSTRINGCN_758.@SCRATCH1
+075     @PSTRINGC_758.@SCRATCH2
+075     MAIN.@SCRATCH2
+076     read_string.max
+076     atoi.result
+076-077 read_plot.tr_or
+076     @PSTRINGCN_758.@SCRATCH2
+076     MAIN.@SCRATCH3
+077     atoi.sign
+077     read_string.len
+077     MAIN.@SCRATCH4
+078-079 read_plot.n_str
+078     atoi.base
+078-07B @FLT.P1
+078-07B @DIVFF.P2
+078     read_string.c
+078-07B @ADDFF.P1
+078     @PRINTF_L32D_758FPFPF.P2
+079     atoi.index
+079     lcd_init.@SCRATCH1
+079     read_string.@SCRATCH1
+079     @PRINTF_L32D_758FPFPF.@SCRATCH1
+07A     atoi.c
+07A     read_plot.s_buf
+07A     read_string.@SCRATCH2
+07A     @PRINTF_L32D_758FPFPF.@SCRATCH2
+07B     read_plot.i
+07B     @MUL88.P1
+07B     atoi.@SCRATCH1
+07B     @PRINTF_L32D_758FPFPF.@SCRATCH3
+07C     @MUL88.P1
+07C     read_plot.j
+07C-07F @DIVFF.P1
+07C-07F @ADDFF.P2
+07C     atoi.@SCRATCH2
+07C     @PRINTF_L32D_758FPFPF.@SCRATCH4
+07C     @FLT.@SCRATCH1
+07D     read_plot.conta_ini
+07D     @PRINTF_L32D_758FPFPF.@SCRATCH5
+07D     @FLT.@SCRATCH2
+07E     read_plot.conta_fin
+07E     @PRINTF_L32D_758FPFPF.@SCRATCH6
+07F     read_plot.@SCRATCH1
+07F     @PRINTF_L32D_758FPFPF.@SCRATCH7
+080     @DIVFF.@SCRATCH1
+080     read_plot.@SCRATCH2
+080     @PRINTF_L32D_758FPFPF.@SCRATCH8
+081-082 read_substring_plot.cp
+081     lcd_putc.c
+081-084 @DIV3232.P1
+081-084 @FTOSD.P2
+081-084 @MULFF.P3
+081     @DIVFF.@SCRATCH2
+082     lcd_gotoxy.x
+082     @delay_ms1.P1
+082     @DIVFF.@SCRATCH3
+083-084 read_substring_plot.vc
+083     lcd_gotoxy.y
+083     @DIVFF.@SCRATCH4
+084     lcd_gotoxy.address
+084     @DIVFF.@SCRATCH5
+085     read_substring_plot.inc
+085     lcd_gotoxy.@SCRATCH1
+085     @DIVFF.@SCRATCH6
+085     @FTOSD.@SCRATCH1
+086     read_substring_plot.fn
+086     lcd_send_byte.address
+087     TRISC
+088-08B @MULFF.P1
+088-08B @DIV3232.P2
+088     read_substring_plot.pt
+088     lcd_send_byte.n
+088     @ADDFF.@SCRATCH1
+089     read_substring_plot.lt
+089     lcd_read_byte.low
+089     lcd_send_byte.@SCRATCH1
+089     @ADDFF.@SCRATCH2
+08A     lcd_read_byte.high
+08A     lcd_send_nibble.n
+08A     @ADDFF.@SCRATCH3
+08A     read_substring_plot.@SCRATCH1
+08B     lcd_read_nibble.n
+08B     lcd_read_byte.@SCRATCH1
+08B     @ADDFF.@SCRATCH4
+08B     read_substring_plot.@SCRATCH2
+08C     lcd_read_nibble.@SCRATCH1
+08C     @MULFF.@SCRATCH1
+08C     @ADDFF.@SCRATCH5
+08C     read_substring_plot.@SCRATCH3
+08C     @DIV3232.@SCRATCH1
+08D     @MULFF.@SCRATCH2
+08D     @ADDFF.@SCRATCH6
+08D     @DIV3232.@SCRATCH2
+08E     @MULFF.@SCRATCH3
+08E     @ADDFF.@SCRATCH7
+08E     @DIV3232.@SCRATCH3
+08F     @ADDFF.@SCRATCH8
+08F     @DIV3232.@SCRATCH4
+090     @DIV3232.@SCRATCH5
+F81     PORTB
+F83     PSP_DATA
+F93     TRISB
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const1092.call
+000018  @const1103.call
+00002C  @const1127.call
+000040  @const1128.call
+000056  @ITOF
+00008C  @delay_ms1
+0000B2  lcd_send_nibble
+0000F6  lcd_read_nibble
+000148  lcd_read_byte
+000196  lcd_send_byte
+0001DC  lcd_init
+000258  read_string
+0002AE  read_substring_plot
+0002FC  read_plot
+00036E  @MUL88
+0003BA  atoi
+000544  lcd_gotoxy
+000566  lcd_putc
+0005B6  @PSTRINGCN_758
+0005D4  @MULFF
+0006C6  @FTOSD
+000706  @DIV3232
+000794  @PRINTF_L32D_758FPFPF
+00090C  @PSTRINGC_758
+00092E  SET_POINT
+000A08  @DIVFF
+000B64  @ADDFF
+000DCE  @FLT
+000E44  @SFTOI
+000E7E  MAIN
+000E7E  @cinit1
+000EBE  @cinit2
+0135  StrtoulGO
+0135  StrtolGO
+
+Project Directory:
+    D:\OneDrive - Soluciones Marva\YouTubeCanal\GitHub\CCS\Horno\
+
+Project Files:
+    horno3.c                                                [24-abr.-22 21:38  CRC=EB29E156]
+    C:\Program Files (x86)\PICC\Devices\18F4550.h           [12-jul.-21 10:21  CRC=BFBE72F1]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [22-feb.-16 10:05  CRC=D1A6378A]
+    C:\Program Files (x86)\PICC\Drivers\stdlib.h            [30-jun.-20 14:21  CRC=452E14BB]
+    C:\Program Files (x86)\PICC\Drivers\stddef.h            [30-ene.-19 12:26  CRC=897CEC6C]
+    C:\Program Files (x86)\PICC\Drivers\string.h            [06-abr.-20 08:43  CRC=B1605627]
+    C:\Program Files (x86)\PICC\Drivers\ctype.h             [03-ene.-08 15:55  CRC=2D1F019F]
+    get_string.c                                            [24-oct.-20 12:21  CRC=FBA78062]
+    C:\Program Files (x86)\PICC\Drivers\stdio.h             [31-jul.-07 15:24  CRC=4E4534F4]
+    get_plot.c                                              [13-ago.-20 17:07  CRC=CF94C26F]
+
+Source signature=12CF1EF2
+Program memory checksum=0000
+Hex file CRC=57BC
+
+Units:
+    D:\OneDrive - Soluciones Marva\YouTubeCanal\GitHub\CCS\Horno\horno3 (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   horno3.xsym
+    Errors:      horno3.err
+    Ext Symbols: horno3.esym
+    INHX32:      horno3.hex
+    Symbols:     horno3.sym
+    List:        horno3.lst
+    Debug/COFF:  horno3.cof
+    Project:     horno3.ccspjt
+    Call Tree:   horno3.tre
+    Statistics:  horno3.STA
