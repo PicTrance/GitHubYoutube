@@ -1,0 +1,45 @@
+[PROJECT]
+Target=dimmer.hex
+Processor_Text=PIC16F18855
+CCSVersion=5.105
+Compiler=PCM
+[Target Data]
+FileList=dimmer.c
+[dimmer.c]
+Type=4
+[mru-list]
+1=dimmer.c
+[Units]
+Count=1
+1=dimmer (main)
+
+[defines]
+buildcount=1
+
+[ProjectLog]
+Days=2
+D1=08-07-2022
+D1_L=2
+D1_L1=[28403]Stopped Editing.
+TotalEdit=286
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L2=[28403]Project Closed.
+D2=23-07-2022
+D2_L=10
+D2_L1=[8388]Project Opened.
+D2_L2=[13422]Project Closed.
+D2_L3=[17807]Project Opened.
+D2_L4=[17817]Started Editing.
+D2_L5=[35195]Stopped Editing.
+D2_L6=[35608]Started Editing.
+D2_L7=[35908]Stopped Editing.
+D2_L8=[37362]Started Editing.
+D2_L9=[37662]Stopped Editing.
+D2_E=285
+D2_D=0
+D2_L10=[39436]Project Closed.
+
+[fileformats]
+forcecoff=0

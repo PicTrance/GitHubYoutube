@@ -1,0 +1,16 @@
+ÀÄdimmer
+   ÃÄMAIN  0/146  Ram=6
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@cinit2  (Inline)  Ram=0
+   ³  ÃÄ@ITOF  0/30  Ram=2
+   ³  ÃÄmap  0/447  Ram=24
+   ³  ³  ÃÄ@ADDFF  0/322  Ram=20
+   ³  ³  ÃÄ@ADDFF  0/322  Ram=20
+   ³  ³  ÃÄ@MULFF  (Inline)  Ram=16
+   ³  ³  ÃÄ@ADDFF  0/322  Ram=20
+   ³  ³  ÃÄ@DIVFF  (Inline)  Ram=18
+   ³  ³  ÀÄ@ADDFF  0/322  Ram=20
+   ³  ÃÄ@SFTOI  0/32  Ram=4
+   ³  ÀÄ@delay_ms1  0/22  Ram=1
+   ÃÄEXT_isr  0/34  Ram=0
+   ÀÄTIMER5_isr  0/18  Ram=0
