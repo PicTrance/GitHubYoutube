@@ -20338,6 +20338,4 @@ void lcd_showCustomChar(uint8_t x, uint8_t y, uint8_t dir){
  lcd_gotoxy( x, y);
 
  lcd_send_byte(1,dir);
-
-
 }

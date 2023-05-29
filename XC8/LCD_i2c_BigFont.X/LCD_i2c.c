@@ -219,6 +219,11 @@ void lcd_showCustomChar(uint8_t x, uint8_t y, uint8_t dir){
 	lcd_gotoxy( x,  y);
 	//CGRAM(dir); // Muestra el caracter especial almacenado en la posicion dir;*/
 	lcd_send_byte(1,dir);
-    
-
 }
+
+#ifdef __XC8
+        #ifndef I2C_MCC_Personal
+            void I2C1_WR(uint8_t address, uint8_t data);
+            uint8_t I2C1_RD(uint8_t address);
+        #endif
+#endif

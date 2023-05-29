@@ -119,7 +119,7 @@ idataBANK1 CODE 0 1728 1728 2 2 1
 dataBANK1 BANK1 1 EA EA 2 1 1
 clrtext CODE 0 17A5 17A5 6 2 1
 config CONFIG 4 8007 8007 5 2 1
-$C:\Users\Edicion\AppData\Local\Temp\xcAsed4.o
+$C:\Users\Edicion\AppData\Local\Temp\xcAsh20.o
 idloc IDLOC 5 8000 8000 4 2 1
 reset_vec CODE 0 0 0 2 2 1
 end_init CODE 0 2 2 2 2 1
@@ -212,28 +212,28 @@ STRING 1810-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\LCD_i2c_BigFont.X.production.o
-7E4 cinit CODE >11606:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7E4 cinit CODE >11609:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7E4 cinit CODE >11680:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7E5 cinit CODE >11681:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7E8 cinit CODE >11682:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7E9 cinit CODE >11683:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7EC cinit CODE >11684:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7ED cinit CODE >11701:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7EE cinit CODE >11702:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7EF cinit CODE >11703:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7F0 cinit CODE >11704:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7F1 cinit CODE >11705:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7F2 cinit CODE >11706:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7F5 cinit CODE >11710:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7F6 cinit CODE >11711:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7F7 cinit CODE >11712:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7F8 cinit CODE >11713:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7F9 cinit CODE >11714:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7FA cinit CODE >11715:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7FD cinit CODE >11721:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7FD cinit CODE >11723:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-7FE cinit CODE >11724:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
+7E4 cinit CODE >11606:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7E4 cinit CODE >11609:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7E4 cinit CODE >11680:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7E5 cinit CODE >11681:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7E8 cinit CODE >11682:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7E9 cinit CODE >11683:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7EC cinit CODE >11684:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7ED cinit CODE >11701:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7EE cinit CODE >11702:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7EF cinit CODE >11703:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7F0 cinit CODE >11704:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7F1 cinit CODE >11705:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7F2 cinit CODE >11706:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7F5 cinit CODE >11710:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7F6 cinit CODE >11711:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7F7 cinit CODE >11712:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7F8 cinit CODE >11713:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7F9 cinit CODE >11714:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7FA cinit CODE >11715:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7FD cinit CODE >11721:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7FD cinit CODE >11723:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+7FE cinit CODE >11724:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
 AA2 text87 CODE >63:D:\OneDriveTrabajo\YouTubeCanal\GitHub\XC8\LCD_i2c_BigFont.X\mcc_generated_files/adcc.c
 AA2 text87 CODE >67:D:\OneDriveTrabajo\YouTubeCanal\GitHub\XC8\LCD_i2c_BigFont.X\mcc_generated_files/adcc.c
 AA4 text87 CODE >69:D:\OneDriveTrabajo\YouTubeCanal\GitHub\XC8\LCD_i2c_BigFont.X\mcc_generated_files/adcc.c
@@ -1102,14 +1102,14 @@ C49 text1 CODE >23:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\n
 280 maintext CODE >89:D:\OneDriveTrabajo\YouTubeCanal\GitHub\XC8\LCD_i2c_BigFont.X\main.c
 285 maintext CODE >91:D:\OneDriveTrabajo\YouTubeCanal\GitHub\XC8\LCD_i2c_BigFont.X\main.c
 28F maintext CODE >94:D:\OneDriveTrabajo\YouTubeCanal\GitHub\XC8\LCD_i2c_BigFont.X\main.c
-17A5 clrtext CODE >11690:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-17A5 clrtext CODE >11691:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-17A6 clrtext CODE >11692:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-17A6 clrtext CODE >11693:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-17A7 clrtext CODE >11694:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-17A8 clrtext CODE >11695:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-17A9 clrtext CODE >11696:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
-17AA clrtext CODE >11697:C:\Users\Edicion\AppData\Local\Temp\xcAsed4.s
+17A5 clrtext CODE >11690:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+17A5 clrtext CODE >11691:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+17A6 clrtext CODE >11692:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+17A6 clrtext CODE >11693:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+17A7 clrtext CODE >11694:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+17A8 clrtext CODE >11695:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+17A9 clrtext CODE >11696:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
+17AA clrtext CODE >11697:C:\Users\Edicion\AppData\Local\Temp\xcAsh20.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1160,7 +1160,7 @@ _WPUA F39 0 ABS 0 - dist/default/production\LCD_i2c_BigFont.X.production.o
 _WPUB F44 0 ABS 0 - dist/default/production\LCD_i2c_BigFont.X.production.o
 _WPUC F4F 0 ABS 0 - dist/default/production\LCD_i2c_BigFont.X.production.o
 _WPUE F65 0 ABS 0 - dist/default/production\LCD_i2c_BigFont.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Edicion\AppData\Local\Temp\xcAsed4.o
+___sp 0 0 STACK 2 stack C:\Users\Edicion\AppData\Local\Temp\xcAsh20.o
 _ctoa 21C 0 CODE 0 text11 dist/default/production\LCD_i2c_BigFont.X.production.o
 _dbuf 120 0 BANK2 1 bssBANK2 dist/default/production\LCD_i2c_BigFont.X.production.o
 _dtoa CE8 0 CODE 0 text4 dist/default/production\LCD_i2c_BigFont.X.production.o
@@ -1172,7 +1172,7 @@ btemp 7E 0 ABS 0 - dist/default/production\LCD_i2c_BigFont.X.production.o
 pad@i 28 0 BANK0 1 cstackBANK0 dist/default/production\LCD_i2c_BigFont.X.production.o
 pad@p 25 0 BANK0 1 cstackBANK0 dist/default/production\LCD_i2c_BigFont.X.production.o
 pad@w 2A 0 BANK0 1 cstackBANK0 dist/default/production\LCD_i2c_BigFont.X.production.o
-start 4 0 CODE 0 init C:\Users\Edicion\AppData\Local\Temp\xcAsed4.o
+start 4 0 CODE 0 init C:\Users\Edicion\AppData\Local\Temp\xcAsh20.o
 ___aomod@counter 71 0 COMMON 1 cstackCOMMON dist/default/production\LCD_i2c_BigFont.X.production.o
 _EUSART_Write 2FBA 0 CODE 0 text14 dist/default/production\LCD_i2c_BigFont.X.production.o
 I2C1_Close@returnValue 71 0 COMMON 1 cstackCOMMON dist/default/production\LCD_i2c_BigFont.X.production.o
@@ -1196,12 +1196,12 @@ __end_of_I2C1_MasterStartRx 2E7E 0 CODE 0 text60 dist/default/production\LCD_i2c
 __end_of_lcd_clear 151E 0 CODE 0 text19 dist/default/production\LCD_i2c_BigFont.X.production.o
 __end_of_lcd_BigFont_writeBigChar 6F6 0 CODE 0 text21 dist/default/production\LCD_i2c_BigFont.X.production.o
 rd1RegCompleteHandler@ptr 79 0 COMMON 1 cstackCOMMON dist/default/production\LCD_i2c_BigFont.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Edicion\AppData\Local\Temp\xcAsed4.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Edicion\AppData\Local\Temp\xcAsed4.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Edicion\AppData\Local\Temp\xcAsed4.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Edicion\AppData\Local\Temp\xcAsed4.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Edicion\AppData\Local\Temp\xcAsed4.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Edicion\AppData\Local\Temp\xcAsed4.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Edicion\AppData\Local\Temp\xcAsh20.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Edicion\AppData\Local\Temp\xcAsh20.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Edicion\AppData\Local\Temp\xcAsh20.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Edicion\AppData\Local\Temp\xcAsh20.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Edicion\AppData\Local\Temp\xcAsh20.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Edicion\AppData\Local\Temp\xcAsh20.o
 __end_of_I2C1_DO_TX_EMPTY 19A6 0 CODE 0 text53 dist/default/production\LCD_i2c_BigFont.X.production.o
 _bigChars 1000 0 STRCODE 0 stringtext1 dist/default/production\LCD_i2c_BigFont.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\LCD_i2c_BigFont.X.production.o
@@ -1275,8 +1275,8 @@ _INLVLE F68 0 ABS 0 - dist/default/production\LCD_i2c_BigFont.X.production.o
 I2C1_MasterSendTxData@data 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD_i2c_BigFont.X.production.o
 Send_D7_D4@datos 2C 0 BANK0 1 cstackBANK0 dist/default/production\LCD_i2c_BigFont.X.production.o
 ?_strlen 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD_i2c_BigFont.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Edicion\AppData\Local\Temp\xcAsed4.o
-___stacklo 0 0 ABS 0 - C:\Users\Edicion\AppData\Local\Temp\xcAsed4.o
+___stackhi 0 0 ABS 0 - C:\Users\Edicion\AppData\Local\Temp\xcAsh20.o
+___stacklo 0 0 ABS 0 - C:\Users\Edicion\AppData\Local\Temp\xcAsh20.o
 __end_of_Send_D7_D4 15E 0 CODE 0 text27 dist/default/production\LCD_i2c_BigFont.X.production.o
 ___aomod@dividend 28 0 BANK0 1 cstackBANK0 dist/default/production\LCD_i2c_BigFont.X.production.o
 _EUSART_Initialize 167A 0 CODE 0 text83 dist/default/production\LCD_i2c_BigFont.X.production.o
@@ -1326,7 +1326,7 @@ _I2C1_Status A0 0 BANK1 1 bssBANK1 dist/default/production\LCD_i2c_BigFont.X.pro
 fputc@fp 74 0 COMMON 1 cstackCOMMON dist/default/production\LCD_i2c_BigFont.X.production.o
 fputs@fp 7A 0 COMMON 1 cstackCOMMON dist/default/production\LCD_i2c_BigFont.X.production.o
 __end_of_ADCC_Initialize 1574 0 CODE 0 text87 dist/default/production\LCD_i2c_BigFont.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Edicion\AppData\Local\Temp\xcAsed4.o
+___int_sp 0 0 STACK 2 stack C:\Users\Edicion\AppData\Local\Temp\xcAsh20.o
 _rd2RegCompleteHandler 14B8 0 CODE 0 text65 dist/default/production\LCD_i2c_BigFont.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -1518,7 +1518,7 @@ _lcd_puts 1F4C 0 CODE 0 text15 dist/default/production\LCD_i2c_BigFont.X.product
 _I2C1_MasterIsNack 2F26 0 CODE 0 text55 dist/default/production\LCD_i2c_BigFont.X.production.o
 __HnvBANK1 0 0 ABS 0 nvBANK1 -
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Edicion\AppData\Local\Temp\xcAsed4.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Edicion\AppData\Local\Temp\xcAsh20.o
 strlen@a 73 0 COMMON 1 cstackCOMMON dist/default/production\LCD_i2c_BigFont.X.production.o
 strlen@s 74 0 COMMON 1 cstackCOMMON dist/default/production\LCD_i2c_BigFont.X.production.o
 lcd_BigFont_writeBigChar@ch 3F 0 BANK0 1 cstackBANK0 dist/default/production\LCD_i2c_BigFont.X.production.o
@@ -1781,8 +1781,8 @@ I2C1_SetCallback@cb 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD_i2c_B
 _SLRCONA F3B 0 ABS 0 - dist/default/production\LCD_i2c_BigFont.X.production.o
 _SLRCONB F46 0 ABS 0 - dist/default/production\LCD_i2c_BigFont.X.production.o
 _SLRCONC F51 0 ABS 0 - dist/default/production\LCD_i2c_BigFont.X.production.o
-___heap_hi 0 0 ABS 0 - C:\Users\Edicion\AppData\Local\Temp\xcAsed4.o
-___heap_lo 0 0 ABS 0 - C:\Users\Edicion\AppData\Local\Temp\xcAsed4.o
+___heap_hi 0 0 ABS 0 - C:\Users\Edicion\AppData\Local\Temp\xcAsh20.o
+___heap_lo 0 0 ABS 0 - C:\Users\Edicion\AppData\Local\Temp\xcAsh20.o
 __end_of_I2C1_MasterStart 2E6C 0 CODE 0 text73 dist/default/production\LCD_i2c_BigFont.X.production.o
 __end_of_I2C1_MasterWrite 2F02 0 CODE 0 text33 dist/default/production\LCD_i2c_BigFont.X.production.o
 __end_of_I2C1_DO_SEND_ADR_READ 2FBA 0 CODE 0 text51 dist/default/production\LCD_i2c_BigFont.X.production.o

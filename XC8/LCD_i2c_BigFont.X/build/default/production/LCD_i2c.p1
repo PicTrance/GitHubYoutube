@@ -2045,7 +2045,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "221
 [; ;LCD_i2c.c: 221:  lcd_send_byte(1,dir);
 [e ( _lcd_send_byte (2 , -> -> 1 `i `uc _dir ]
-"224
-[; ;LCD_i2c.c: 224: }
+"222
+[; ;LCD_i2c.c: 222: }
 [e :UE 1613 ]
 }
