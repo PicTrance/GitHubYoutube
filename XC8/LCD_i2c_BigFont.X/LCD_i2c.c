@@ -215,8 +215,13 @@ void lcd_setCustomChar(uint8_t dir, uint8_t *dato){ // Donde dir es la posicion 
 	}
 }
 
-void lcd_showCustomChar(uint8_t x, uint8_t y, uint8_t dir){
-	lcd_gotoxy( x,  y);
+void lcd_showCustomChar(uint8_t dir){
+	//CGRAM(dir); // Muestra el caracter especial almacenado en la posicion dir;*/
+	lcd_send_byte(1,dir);
+}
+
+lcd_showCustomCharXY(uint8_t x, uint8_t y, uint8_t dir){
+    lcd_gotoxy( x,  y);
 	//CGRAM(dir); // Muestra el caracter especial almacenado en la posicion dir;*/
 	lcd_send_byte(1,dir);
 }

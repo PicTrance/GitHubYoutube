@@ -100,8 +100,8 @@ ifneq ($(INFORMATION_MESSAGE), )
 endif
 	${MAKE}  -f nbproject/Makefile-default.mk ${DISTDIR}/LCD_i2c_BigFont.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 	@echo "--------------------------------------"
-	@echo "User defined post-build step: [cp ${ImagePath} F:/]"
-	@cp ${ImagePath} F:/
+	@echo "User defined post-build step: [cp ${ImagePath} x:/]"
+	@cp ${ImagePath} x:/
 	@echo "--------------------------------------"
 
 MP_PROCESSOR_OPTION=16F18855

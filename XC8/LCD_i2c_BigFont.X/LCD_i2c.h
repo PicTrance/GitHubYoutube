@@ -120,7 +120,8 @@
     void CGRAM_x(uint8_t p);*/
 
     void lcd_setCustomChar(uint8_t dir, uint8_t *dato); // Donde dir es la posicion en donde se escribiran los caracteres, va de 0 a 7
-    void lcd_showCustomChar(uint8_t x, uint8_t y, uint8_t dir);
+    void lcd_showCustomChar(uint8_t dir);
+    void lcd_showCustomCharXY(uint8_t x, uint8_t y, uint8_t dir);
     
     #ifdef __XC8
         #ifndef I2C_MCC_Personal

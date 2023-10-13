@@ -18,9 +18,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "115 ./LCD_i2c.h
 [; ;./LCD_i2c.h: 115:     void lcd_gotoxy(uint8_t x, uint8_t y);
 [v _lcd_gotoxy `(v ~T0 @X0 0 ef2`uc`uc ]
-[v F192 `(v ~T0 @X0 1 tf1`ul ]
+[v F183 `(v ~T0 @X0 1 tf1`ul ]
 "12 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16F1xxxx_DFP/1.15.191/xc8\pic\include\builtins.h
-[v __delay `JF192 ~T0 @X0 0 e ]
+[v __delay `JF183 ~T0 @X0 0 e ]
 [p i __delay ]
 "116 ./LCD_i2c.h
 [; ;./LCD_i2c.h: 116:     void lcd_putc(uint8_t c);
@@ -28,8 +28,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "118
 [; ;./LCD_i2c.h: 118:     void lcd_clear();
 [v _lcd_clear `(v ~T0 @X0 0 e? ]
-"109 C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\stdio.h
-[; ;C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\stdio.h: 109: int sprintf(char *restrict, const char *restrict, ...);
+"113 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
 "54 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16F1xxxx_DFP/1.15.191/xc8\pic\include\proc\pic16f18855.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16F1xxxx_DFP/1.15.191/xc8\pic\include\proc\pic16f18855.h: 54: __asm("INDF0 equ 00h");
@@ -1585,10 +1584,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35049
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16F1xxxx_DFP/1.15.191/xc8\pic\include\proc\pic16f18855.h: 35049: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-[v F12219 `Cuc ~T0 @X0 -> 8 `i t ]
+[v F12223 `Cuc ~T0 @X0 -> 8 `i t ]
 "15 ./BigFont_LCD.h
 [; ;./BigFont_LCD.h: 15:     const uint8_t custom[][8] = {
-[v _custom `F12219 ~T0 @X0 -> 8 `i e ]
+[v _custom `F12223 ~T0 @X0 -> 8 `i e ]
 [i _custom
 :U ..
 :U ..
@@ -1673,10 +1672,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-[v F12221 `Cuc ~T0 @X0 -> 8 `i t ]
+[v F12225 `Cuc ~T0 @X0 -> 8 `i t ]
 "28
 [; ;./BigFont_LCD.h: 28:     const uint8_t bigChars[][8] = {
-[v _bigChars `F12221 ~T0 @X0 -> 64 `i e ]
+[v _bigChars `F12225 ~T0 @X0 -> 64 `i e ]
 [i _bigChars
 :U ..
 :U ..

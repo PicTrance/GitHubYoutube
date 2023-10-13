@@ -1562,10 +1562,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35049
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16F1xxxx_DFP/1.15.191/xc8\pic\include\proc\pic16f18855.h: 35049: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-[v F12219 `Cuc ~T0 @X0 -> 8 `i t ]
+[v F12223 `Cuc ~T0 @X0 -> 8 `i t ]
 "15 ./BigFont_LCD.h
 [; ;./BigFont_LCD.h: 15:     const uint8_t custom[][8] = {
-[v _custom `F12219 ~T0 @X0 -> 8 `i e ]
+[v _custom `F12223 ~T0 @X0 -> 8 `i e ]
 [i _custom
 :U ..
 :U ..
@@ -1650,10 +1650,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-[v F12221 `Cuc ~T0 @X0 -> 8 `i t ]
+[v F12225 `Cuc ~T0 @X0 -> 8 `i t ]
 "28
 [; ;./BigFont_LCD.h: 28:     const uint8_t bigChars[][8] = {
-[v _bigChars `F12221 ~T0 @X0 -> 64 `i e ]
+[v _bigChars `F12225 ~T0 @X0 -> 64 `i e ]
 [i _bigChars
 :U ..
 :U ..
