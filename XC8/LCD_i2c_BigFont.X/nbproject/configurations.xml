@@ -21,6 +21,12 @@
       <itemPath>BigFont_LCD.h</itemPath>
       <itemPath>I2C_MCC_Personal.h</itemPath>
     </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>LCD_i2c_BigFont.mc3</itemPath>
+    </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
@@ -45,12 +51,6 @@
       <itemPath>LCD_i2c.c</itemPath>
       <itemPath>BigFont_LCD.c</itemPath>
       <itemPath>I2C_MCC_Personal.c</itemPath>
-    </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <itemPath>Makefile</itemPath>
-      <itemPath>LCD_i2c_BigFont.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
