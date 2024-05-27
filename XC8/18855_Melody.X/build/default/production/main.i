@@ -20526,48 +20526,37 @@ void Clear_LCD();
 void CGRAM(uint8_t n);
 void CGRAM_x(uint8_t p);
 # 4 "main.c" 2
-
-
-
-
-
-
-uint8_t EMC1001 = 0b0111000, EMC1001_Wdata = 0;
+# 13 "main.c"
+uint8_t EMC1001 = 0b0111000;
 uint8_t dato[4], th,tl;
-
-uint8_t contador=0;
-
 
 int main(void)
 {
+    uint8_t contador = 0;
     uint8_t status,buffer[10];
     SYSTEM_Initialize();
 # 37 "main.c"
-    printf("\n\ni2c Melody\n\n\n" );
     lcd_init();
-    lcd_puts("\f     Hola mundo\n   I2C MCC Melody");
+
+    lcd_puts("\fHola mundo\ni2c MMC_Melody");
+
+
+
     while(1)
     {
-        static int contador = 0;
         uint16_t adc = ADCC_GetSingleConversion(POT);
-
-        status = I2C_Read1Byte(EMC1001, 0, &th);
-        status = I2C_Read1Byte(EMC1001, 2, &tl);
-        printf("hola mundo: %d\tADC: %d\n",contador++,adc);
-        printf("Status i2c: %d\n",status);
-        printf("temp: %d.%d\n",th,((tl>>6)*25));
+        I2C_Read1Byte(EMC1001,0,&th);
+        I2C_Read1Byte(EMC1001,2,&tl);
+        printf("Ejemplo i2c YouTube\ncontador: %d\tADC: %d\n",contador++,adc);
+        printf("T: %d.%d\n", th,(tl>>6)*25);
 
         lcd_gotoxy(1,3);
-        sprintf(buffer,"T: %d.%d%cC",th,((tl>>6)*25),223);
-        lcd_puts(buffer);
-        lcd_gotoxy(1,4);
         sprintf(buffer,"ADC: %04d",adc);
         lcd_puts(buffer);
-        if(PORTAbits.RA5==0){
-            do { LATAbits.LATA0 = 1; } while(0);
-        }else{
-            do { LATAbits.LATA0 = 0; } while(0);
-        }
-        _delay((unsigned long)((900)*(32000000/4000.0)));
+
+        lcd_gotoxy(1,4);
+        sprintf(buffer,"T: %d.%02d",th,(tl>>6)*25);
+        lcd_puts(buffer);
+        _delay((unsigned long)((500)*(32000000/4000.0)));
     }
 }

@@ -905,44 +905,7 @@ static void pad(FILE *fp, char *buf, int p)
 
 
 }
-# 476 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
-static void ctoa(FILE *fp, char c)
-{
-    int l,w;
-
-
-    w = width ? width - 1 : width;
-
-
-
-    if (flags & (1 << 0)) {
-        fputc(c, fp);
-    }
-
-
-
-    w = (w < 0) ? 0 : w;
-    l = 0;
-    while (l < w) {
-        fputc(' ', fp);
-        ++l;
-    }
-
-
-    if (!(flags & (1 << 0))) {
-
-        fputc(c, fp);
-
-    }
-
-
-
-
-
-}
-
-
-
+# 513 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
 static void dtoa(FILE *fp, vfpf_sint_t d)
 {
  char s;
@@ -1066,18 +1029,7 @@ vfpfcnvrt(FILE *fp, char *fmt[], va_list ap)
    flags |= (1 << 0);
    width = -width;
   }
-# 1273 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
-        if ((*fmt)[0] == 'c') {
-            ++*fmt;
-            c = (unsigned char)(*(int *)__va_arg(*(int **)ap, (int)0));
-# 1284 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
-            return (void) ctoa(fp, c);
-
-        }
-
-
-
-
+# 1291 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
   cp = *fmt;
 # 1361 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\sources\\c99\\common\\doprnt.c"
   if (*cp == 'd' || *cp == 'i') {

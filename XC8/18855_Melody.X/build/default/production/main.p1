@@ -3,17 +3,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "58 ./mcc_generated_files/system/../uart/../system/system.h
 [; ;./mcc_generated_files/system/../uart/../system/system.h: 58: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"117 C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\stdio.h
-[; ;C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\stdio.h: 117: int printf(const char *restrict, ...);
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "87 ./LCD_i2c.h
 [; ;./LCD_i2c.h: 87: void lcd_init(void);
 [v _lcd_init `(v ~T0 @X0 0 ef ]
 "90
 [; ;./LCD_i2c.h: 90: void lcd_puts(unsigned char *dato);
 [v _lcd_puts `(v ~T0 @X0 0 ef1`*uc ]
-"43 main.c
-[; ;main.c: 43:         uint16_t adc = ADCC_GetSingleConversion(POT);
+"45 main.c
+[; ;main.c: 45:         uint16_t adc = ADCC_GetSingleConversion(POT);
 [c E11703 60 61 62 63 4 .. ]
 [n E11703 . channel_VSS channel_Temp channel_DAC1 channel_FVR_buf1 POT  ]
 "117 ./mcc_generated_files/system/../adc/adcc.h
@@ -22,34 +19,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "38 ./myLib_I2C.h
 [; ;./myLib_I2C.h: 38: uint8_t I2C_Read1Byte(uint8_t deviceAddress, uint8_t registerAddress, uint8_t *readData);
 [v _I2C_Read1Byte `(uc ~T0 @X0 0 ef3`uc`uc`*uc ]
+"117 C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\stdio.h
+[; ;C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\stdio.h: 117: int printf(const char *restrict, ...);
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "88 ./LCD_i2c.h
 [; ;./LCD_i2c.h: 88: void lcd_gotoxy(int8 x, int8 y);
 [v _lcd_gotoxy `(v ~T0 @X0 0 ef2`uc`uc ]
 "121 C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\stdio.h
 [; ;C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\stdio.h: 121: int sprintf(char *restrict, const char *restrict, ...);
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"390 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18855.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18855.h: 390:     struct {
-[s S33 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S33 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
-"389
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18855.h: 389: typedef union {
-[u S32 `S33 1 ]
-[n S32 . . ]
-"401
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18855.h: 401: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x00C)));
-[v _PORTAbits `VS32 ~T0 @X0 0 e@12 ]
-"783
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18855.h: 783:     struct {
-[s S47 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S47 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
-"782
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18855.h: 782: typedef union {
-[u S46 `S47 1 ]
-[n S46 . . ]
-"794
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18855.h: 794: extern volatile LATAbits_t LATAbits __attribute__((address(0x016)));
-[v _LATAbits `VS46 ~T0 @X0 0 e@22 ]
 [v F202 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v2.46\pic\include\builtins.h
 [v __delay `JF202 ~T0 @X0 0 e ]
@@ -1623,27 +1601,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 6 `i `uc
 ..
 ]
-"10 main.c
-[; ;main.c: 10: uint8_t EMC1001 = 0b0111000, EMC1001_Wdata = 0;
+"13 main.c
+[; ;main.c: 13: uint8_t EMC1001 = 0b0111000;
 [v _EMC1001 `uc ~T0 @X0 1 e ]
 [i _EMC1001
 -> -> 56 `i `uc
 ]
-[v _EMC1001_Wdata `uc ~T0 @X0 1 e ]
-[i _EMC1001_Wdata
--> -> 0 `i `uc
-]
-"11
-[; ;main.c: 11: uint8_t dato[4], th,tl;
+"14
+[; ;main.c: 14: uint8_t dato[4], th,tl;
 [v _dato `uc ~T0 @X0 -> 4 `i e ]
 [v _th `uc ~T0 @X0 1 e ]
 [v _tl `uc ~T0 @X0 1 e ]
-"13
-[; ;main.c: 13: uint8_t contador=0;
-[v _contador `uc ~T0 @X0 1 e ]
-[i _contador
--> -> 0 `i `uc
-]
 [v $root$_main `(v ~T0 @X0 0 e ]
 "16
 [; ;main.c: 16: int main(void)
@@ -1654,117 +1622,79 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _main ]
 [f ]
 "18
-[; ;main.c: 18:     uint8_t status,buffer[10];
+[; ;main.c: 18:     uint8_t contador = 0;
+[v _contador `uc ~T0 @X0 1 a ]
+[e = _contador -> -> 0 `i `uc ]
+"19
+[; ;main.c: 19:     uint8_t status,buffer[10];
 [v _status `uc ~T0 @X0 1 a ]
 [v _buffer `uc ~T0 @X0 -> 10 `i a ]
-"19
-[; ;main.c: 19:     SYSTEM_Initialize();
+"20
+[; ;main.c: 20:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
 "37
-[; ;main.c: 37:     printf("\n\ni2c Melody\n\n\n" );
-[e ( _printf :s 1C ]
-"38
-[; ;main.c: 38:     lcd_init();
+[; ;main.c: 37:     lcd_init();
 [e ( _lcd_init ..  ]
 "39
-[; ;main.c: 39:     lcd_puts("\f     Hola mundo\n   I2C MCC Melody");
-[e ( _lcd_puts (1 :s 2C ]
-"40
-[; ;main.c: 40:     while(1)
-[e :U 1573 ]
-"41
-[; ;main.c: 41:     {
-{
-"42
-[; ;main.c: 42:         static int contador = 0;
-[v F12391 `i ~T0 @X0 1 s contador ]
-[i F12391
--> 0 `i
-]
+[; ;main.c: 39:     lcd_puts("\fHola mundo\ni2c MMC_Melody");
+[e ( _lcd_puts (1 :s 1C ]
 "43
-[; ;main.c: 43:         uint16_t adc = ADCC_GetSingleConversion(POT);
+[; ;main.c: 43:     while(1)
+[e :U 1573 ]
+"44
+[; ;main.c: 44:     {
+{
+"45
+[; ;main.c: 45:         uint16_t adc = ADCC_GetSingleConversion(POT);
 [v _adc `us ~T0 @X0 1 a ]
 [e = _adc ( _ADCC_GetSingleConversion (1 . `E11703 4 ]
-"45
-[; ;main.c: 45:         status = I2C_Read1Byte(EMC1001, 0, &th);
-[e = _status ( _I2C_Read1Byte (3 , , _EMC1001 -> -> 0 `i `uc &U _th ]
 "46
-[; ;main.c: 46:         status = I2C_Read1Byte(EMC1001, 2, &tl);
-[e = _status ( _I2C_Read1Byte (3 , , _EMC1001 -> -> 2 `i `uc &U _tl ]
+[; ;main.c: 46:         I2C_Read1Byte(EMC1001,0,&th);
+[e ( _I2C_Read1Byte (3 , , _EMC1001 -> -> 0 `i `uc &U _th ]
 "47
-[; ;main.c: 47:         printf("hola mundo: %d\tADC: %d\n",contador++,adc);
-[e ( _printf , , (. :s 3C ++ F12391 -> 1 `i -> _adc `ui ]
+[; ;main.c: 47:         I2C_Read1Byte(EMC1001,2,&tl);
+[e ( _I2C_Read1Byte (3 , , _EMC1001 -> -> 2 `i `uc &U _tl ]
 "48
-[; ;main.c: 48:         printf("Status i2c: %d\n",status);
-[e ( _printf , (. :s 4C -> _status `i ]
+[; ;main.c: 48:         printf("Ejemplo i2c YouTube\ncontador: %d\tADC: %d\n",contador++,adc);
+[e ( _printf , , (. :s 2C -> ++ _contador -> -> 1 `i `uc `i -> _adc `ui ]
 "49
-[; ;main.c: 49:         printf("temp: %d.%d\n",th,((tl>>6)*25));
-[e ( _printf , , (. :s 5C -> _th `i * >> -> _tl `i -> 6 `i -> 25 `i ]
+[; ;main.c: 49:         printf("T: %d.%d\n", th,(tl>>6)*25);
+[e ( _printf , , (. :s 3C -> _th `i * >> -> _tl `i -> 6 `i -> 25 `i ]
 "51
 [; ;main.c: 51:         lcd_gotoxy(1,3);
 [e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 3 `i `uc ]
 "52
-[; ;main.c: 52:         sprintf(buffer,"T: %d.%d%cC",th,((tl>>6)*25),223);
-[e ( _sprintf (1 , , , (. , -> &U _buffer `*uc :s 6C -> _th `i * >> -> _tl `i -> 6 `i -> 25 `i -> 223 `i ]
+[; ;main.c: 52:         sprintf(buffer,"ADC: %04d",adc);
+[e ( _sprintf (1 , (. , -> &U _buffer `*uc :s 4C -> _adc `ui ]
 "53
 [; ;main.c: 53:         lcd_puts(buffer);
 [e ( _lcd_puts (1 &U _buffer ]
-"54
-[; ;main.c: 54:         lcd_gotoxy(1,4);
-[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 4 `i `uc ]
 "55
-[; ;main.c: 55:         sprintf(buffer,"ADC: %04d",adc);
-[e ( _sprintf (1 , (. , -> &U _buffer `*uc :s 7C -> _adc `ui ]
+[; ;main.c: 55:         lcd_gotoxy(1,4);
+[e ( _lcd_gotoxy (2 , -> -> 1 `i `uc -> -> 4 `i `uc ]
 "56
-[; ;main.c: 56:         lcd_puts(buffer);
-[e ( _lcd_puts (1 &U _buffer ]
+[; ;main.c: 56:         sprintf(buffer,"T: %d.%02d",th,(tl>>6)*25);
+[e ( _sprintf (1 , , (. , -> &U _buffer `*uc :s 5C -> _th `i * >> -> _tl `i -> 6 `i -> 25 `i ]
 "57
-[; ;main.c: 57:         if(PORTAbits.RA5==0){
-[e $ ! == -> . . _PORTAbits 0 5 `i -> 0 `i 1575  ]
-{
+[; ;main.c: 57:         lcd_puts(buffer);
+[e ( _lcd_puts (1 &U _buffer ]
 "58
-[; ;main.c: 58:             do { LATAbits.LATA0 = 1; } while(0);
-[e :U 1578 ]
-{
-[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
-}
-[e :U 1577 ]
+[; ;main.c: 58:         _delay((unsigned long)((500)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "59
-[; ;main.c: 59:         }else{
-}
-[e $U 1579  ]
-[e :U 1575 ]
-{
-"60
-[; ;main.c: 60:             do { LATAbits.LATA0 = 0; } while(0);
-[e :U 1582 ]
-{
-[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
-}
-[e :U 1581 ]
-"61
-[; ;main.c: 61:         }
-}
-[e :U 1579 ]
-"62
-[; ;main.c: 62:         _delay((unsigned long)((900)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 900 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"63
-[; ;main.c: 63:     }
+[; ;main.c: 59:     }
 }
 [e :U 1572 ]
 [e $U 1573  ]
 [e :U 1574 ]
-"64
-[; ;main.c: 64: }
+"60
+[; ;main.c: 60: }
 [e :UE 1571 ]
 }
 [p f _printf 8388736 ]
-[p f _sprintf 8945796 ]
-[a 2C 12 32 32 32 32 32 72 111 108 97 32 109 117 110 100 111 10 32 32 32 73 50 67 32 77 67 67 32 77 101 108 111 100 121 0 ]
-[a 7C 65 68 67 58 32 37 48 52 100 0 ]
-[a 6C 84 58 32 37 100 46 37 100 37 99 67 0 ]
-[a 5C 116 101 109 112 58 32 37 100 46 37 100 10 0 ]
-[a 4C 83 116 97 116 117 115 32 105 50 99 58 32 37 100 10 0 ]
-[a 3C 104 111 108 97 32 109 117 110 100 111 58 32 37 100 9 65 68 67 58 32 37 100 10 0 ]
-[a 1C 10 10 105 50 99 32 77 101 108 111 100 121 10 10 10 0 ]
+[p f _sprintf 8421508 ]
+[a 1C 12 72 111 108 97 32 109 117 110 100 111 10 105 50 99 32 77 77 67 95 77 101 108 111 100 121 0 ]
+[a 4C 65 68 67 58 32 37 48 52 100 0 ]
+[a 5C 84 58 32 37 100 46 37 48 50 100 0 ]
+[a 3C 84 58 32 37 100 46 37 100 10 0 ]
+[a 2C 69 106 101 109 112 108 111 32 105 50 99 32 89 111 117 84 117 98 101 10 99 111 110 116 97 100 111 114 58 32 37 100 9 65 68 67 58 32 37 100 10 0 ]

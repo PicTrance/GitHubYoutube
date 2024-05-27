@@ -1,0 +1,191 @@
+
+
+Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
+                                                                                                           Mon May 27 16:53:36 2024
+
+
+     1                           	processor	16F18855
+     2                           	pagewidth 132
+     3                           	psect	code,global,class=CODE,delta=2
+     4                           	psect	powerup,global,class=CODE,delta=2
+     5                           	psect	reset_vec,global,class=CODE,delta=2
+     6                           	psect	maintext,global,class=CODE,delta=2
+     7                           	psect	eeprom_data,global,class=EEDATA,space=3,delta=2,noexec
+     8                           	psect	strings,global,reloc=256,class=CODE,delta=2
+     9                           	psect	intentry,global,class=CODE,delta=2
+    10                           	psect	sivt,global,class=CODE,delta=2
+    11                           	psect	functab,global,class=ENTRY,delta=2
+    12                           	psect	init,global,class=CODE,delta=2
+    13                           	psect	cinit,global,class=CODE,delta=2
+    14                           	psect	text,global,class=CODE,delta=2
+    15                           	psect	end_init,global,class=CODE,delta=2
+    16                           	psect	clrtext,global,class=CODE,delta=2
+    17                           	psect	stack,global,class=STACK,space=2,delta=1,noexec
+    18                           	psect	heap,global,class=HEAP,space=7,delta=1,noexec
+    19                           	psect	common,global,class=COMMON,space=1,delta=1
+    20                           	psect	bank0,global,class=BANK0,space=1,delta=1
+    21                           	psect	bank1,global,class=BANK1,space=1,delta=1
+    22                           	psect	bank2,global,class=BANK2,space=1,delta=1
+    23                           	psect	bank3,global,class=BANK3,space=1,delta=1
+    24                           	psect	bank4,global,class=BANK4,space=1,delta=1
+    25                           	psect	bank5,global,class=BANK5,space=1,delta=1
+    26                           	psect	bank6,global,class=BANK6,space=1,delta=1
+    27                           	psect	bank7,global,class=BANK7,space=1,delta=1
+    28                           	psect	bank8,global,class=BANK8,space=1,delta=1
+    29                           	psect	bank9,global,class=BANK9,space=1,delta=1
+    30                           	psect	bank10,global,class=BANK10,space=1,delta=1
+    31                           	psect	bank11,global,class=BANK11,space=1,delta=1
+    32                           	psect	bank12,global,class=BANK12,space=1,delta=1
+    33                           	psect	bank13,global,class=BANK13,space=1,delta=1
+    34                           	psect	bank14,global,class=BANK14,space=1,delta=1
+    35                           	psect	bank15,global,class=BANK15,space=1,delta=1
+    36                           	psect	bank16,global,class=BANK16,space=1,delta=1
+    37                           	psect	bank17,global,class=BANK17,space=1,delta=1
+    38                           	psect	bank18,global,class=BANK18,space=1,delta=1
+    39                           	psect	bank19,global,class=BANK19,space=1,delta=1
+    40                           	psect	bank20,global,class=BANK20,space=1,delta=1
+    41                           	psect	bank21,global,class=BANK21,space=1,delta=1
+    42                           	psect	bank22,global,class=BANK22,space=1,delta=1
+    43                           	psect	bank23,global,class=BANK23,space=1,delta=1
+    44                           	psect	bank24,global,class=BANK24,space=1,delta=1
+    45                           	psect	bank25,global,class=BANK25,space=1,delta=1
+    46                           	psect	bank26,global,class=BANK26,space=1,delta=1
+    47                           	psect	bank27,global,class=BANK27,space=1,delta=1
+    48                           	psect	bank28,global,class=BANK28,space=1,delta=1
+    49                           	psect	bank29,global,class=BANK29,space=1,delta=1
+    50                           	psect	bank30,global,class=BANK30,space=1,delta=1
+    51                           	psect	bank31,global,class=BANK31,space=1,delta=1
+    52                           	psect	bigram,global,class=BIGRAM,space=1,delta=1
+    53                           	psect	ram,global,class=RAM,space=1,delta=1
+    54                           	psect	abs1,global,class=ABS1,space=1,delta=1
+    55                           	psect	sfr0,global,class=SFR0,space=1,delta=1
+    56                           	psect	sfr1,global,class=SFR1,space=1,delta=1
+    57                           	psect	sfr2,global,class=SFR2,space=1,delta=1
+    58                           	psect	sfr3,global,class=SFR3,space=1,delta=1
+    59                           	psect	sfr4,global,class=SFR4,space=1,delta=1
+    60                           	psect	sfr5,global,class=SFR5,space=1,delta=1
+    61                           	psect	sfr6,global,class=SFR6,space=1,delta=1
+    62                           	psect	sfr7,global,class=SFR7,space=1,delta=1
+    63                           	psect	sfr8,global,class=SFR8,space=1,delta=1
+    64                           	psect	sfr9,global,class=SFR9,space=1,delta=1
+    65                           	psect	sfr10,global,class=SFR10,space=1,delta=1
+    66                           	psect	sfr11,global,class=SFR11,space=1,delta=1
+    67                           	psect	sfr12,global,class=SFR12,space=1,delta=1
+    68                           	psect	sfr13,global,class=SFR13,space=1,delta=1
+    69                           	psect	sfr14,global,class=SFR14,space=1,delta=1
+    70                           	psect	sfr15,global,class=SFR15,space=1,delta=1
+    71                           	psect	sfr16,global,class=SFR16,space=1,delta=1
+    72                           	psect	sfr17,global,class=SFR17,space=1,delta=1
+    73                           	psect	sfr18,global,class=SFR18,space=1,delta=1
+    74                           	psect	sfr19,global,class=SFR19,space=1,delta=1
+    75                           	psect	sfr20,global,class=SFR20,space=1,delta=1
+    76                           	psect	sfr21,global,class=SFR21,space=1,delta=1
+    77                           	psect	sfr22,global,class=SFR22,space=1,delta=1
+    78                           	psect	sfr23,global,class=SFR23,space=1,delta=1
+    79                           	psect	sfr24,global,class=SFR24,space=1,delta=1
+    80                           	psect	sfr25,global,class=SFR25,space=1,delta=1
+    81                           	psect	sfr26,global,class=SFR26,space=1,delta=1
+    82                           	psect	sfr27,global,class=SFR27,space=1,delta=1
+    83                           	psect	sfr28,global,class=SFR28,space=1,delta=1
+    84                           	psect	sfr29,global,class=SFR29,space=1,delta=1
+    85                           	psect	sfr30,global,class=SFR30,space=1,delta=1
+    86                           	psect	sfr31,global,class=SFR31,space=1,delta=1
+    87                           
+    88                           	psect	reset_vec
+    89     0000                     reset_vec:
+    90                           
+    91                           ; No powerup routine
+    92                           ; jump to start
+    93     0000  3180  2802         	ljmp	start
+    94                           
+    95                           	psect	maintext
+    96                           
+    97                           ; Microchip MPLAB XC8 C Compiler V2.46
+    98                           ; Copyright (C) 2024 Microchip Technology Inc.
+    99                           ; Auto-generated runtime startup code for final link stage.
+   100                           ;
+   101                           ; Compiler options:
+   102                           ;
+   103                           ; -q --opt=none --chip=16f18855 \
+   104                           ; -Mdist/default/production/18855_Melody.X.production.map \
+   105                           ; -DXPRJ_default=default -L--defsym=__MPLAB_BUILD=1 \
+   106                           ; --dfp=C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8 \
+   107                           ; --opt=+asmfile --addrqual=ignore -P --warn=-3 --asmlist --std=c99 \
+   108                           ; --output=+elf:multilocs --stack=compiled:auto:auto --summary=+xml \
+   109                           ; --summarydir=dist/default/production/memoryfile.xml \
+   110                           ; -o18855_Melody.X.production.elf --objdir=dist/default/production \
+   111                           ; --outdir=dist/default/production \
+   112                           ; build/default/production/mcc_generated_files/adc/src/adcc.p1 \
+   113                           ; build/default/production/mcc_generated_files/i2c_host/src/mssp1.p1 \
+   114                           ; build/default/production/mcc_generated_files/system/src/system.p1 \
+   115                           ; build/default/production/mcc_generated_files/system/src/config_bits.p1 \
+   116                           ; build/default/production/mcc_generated_files/system/src/pins.p1 \
+   117                           ; build/default/production/mcc_generated_files/system/src/clock.p1 \
+   118                           ; build/default/production/mcc_generated_files/system/src/interrupt.p1 \
+   119                           ; build/default/production/mcc_generated_files/timer/src/tmr0.p1 \
+   120                           ; build/default/production/mcc_generated_files/uart/src/eusart.p1 \
+   121                           ; build/default/production/main.p1 \
+   122                           ; build/default/production/myLib_I2C.p1 \
+   123                           ; build/default/production/LCD_i2c.p1 -L--fixupoverflow=error \
+   124                           ; --callgraph=none --errformat=%f:%l:%c: error: (%n) %s \
+   125                           ; --warnformat=%f:%l:%c: warning: (%n) %s \
+   126                           ; --msgformat=%f:%l:%c: advisory: (%n) %s
+   127                           ;
+   128     0000                     C	set	0
+   129     0002                     Z	set	2
+   130     0002                     PCL	set	2
+   131     0000                     INDF	set	0
+   132     000A                     
+   133                           	psect	functab
+   134     0000                     intlevel0:
+   135     0000                     intlevel1:
+   136     0000                     intlevel2:
+   137     0000                     intlevel3:
+   138     0000                     intlevel4:
+   139     0000                     intlevel5:
+   140                           
+   141                           	psect	init
+   142     0002                     start:	
+   143                           ; No interrupt routine
+   144                           
+   145                           
+   146                           ;Initialize the stack pointer (FSR1)
+   147     0000                     
+   148                           	psect	end_init
+   149     0002  3187  2FDC         	ljmp	start_initialization	;jump to C runtime clear & initialization
+   150                           
+   151                           	psect	clrtext
+   152     0000                     INDF0	set	0
+   153     0001                     INDF1	set	1
+   154     0002                     PCL	set	2
+   155     0003                     STATUS	set	3
+   156     0004                     FSR0L	set	4
+   157     0005                     FSR0H	set	5
+   158     0006                     FSR1L	set	6
+   159     0007                     FSR1H	set	7
+   160     0008                     BSR	set	8
+   161     0009                     WREG	set	9
+   162     000A                     PCLATH	set	10
+   163     000B                     INTCON	set	11
+   164                           
+   165                           	psect	stack
+   166     0000                     ___sp:
+   167     0000                     ___int_sp:
+   168     0000                     ___stack_lo:
+   169     0000                     ___stack_hi:
+   170     0000                     ___int_stack_lo:
+   171     0000                     ___int_stack_hi:
+   172                           
+   173                           	psect	heap
+   174                           
+   175                           ; No heap to be allocated
+
+
+Microchip Technology PIC Macro Assembler V2.46 build 20240104201356 
+Symbol Table                                                                                               Mon May 27 16:53:36 2024
+
+               ___sp 0000                 _main 06EE                 start 0002           ___stack_hi 0000  
+         ___stack_lo 0000       ___int_stack_hi 0000       ___int_stack_lo 0000  start_initialization 07DC  
+          ___heap_hi 0000            ___heap_lo 0000            ___stackhi 0000            ___stacklo 0000  
+           ___int_sp 0000             intlevel0 0000             intlevel1 0000             intlevel2 0000  
+           intlevel3 0000             intlevel4 0000             intlevel5 0000             reset_vec 0000  
