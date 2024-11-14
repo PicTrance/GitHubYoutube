@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production\LCD_MCCmelody_57q84.X.production.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>131072</length>
+      <used>5378</used>
+      <free>125694</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>12800</length>
+      <used>177</used>
+      <free>12623</free>
+    </memory>
+  </executable>
+</project>
